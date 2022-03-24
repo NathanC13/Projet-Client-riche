@@ -2,12 +2,12 @@
     <head>
         <meta charset="utf-8">
         <!-- importer le fichier de style -->
-        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="../CSS/styleprincipale.css" media="screen" type="text/css" />
     </head>
-    <body style='background:#fff;'>
+    <body>
         <div id="content">
             
-            <a href='principale.php?deconnexion=true'><span>Déconnexion</span></a>
+            <a href='principale.php?deconnexion=true'><input type="submit" id="1" value="Déconnexion"></a>
             
             <!-- tester si l'utilisateur est connecté -->
             <?php
@@ -16,7 +16,7 @@
                 { 
                    if($_GET['deconnexion']==true)
                    {  
-                      session_unset();
+                      session_destroy();
                       header("location:login.php");
                    }
                 }
