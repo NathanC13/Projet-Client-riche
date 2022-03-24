@@ -1,0 +1,33 @@
+body{
+    background: #9cc2ee;
+}
+#container{
+    padding: 2em;
+    margin:5px auto;
+}
+
+#h2{
+    padding-left: 2em;  
+}
+
+#bouton{
+    padding: 2em;
+} 
+
+input[type=submit] {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
+
