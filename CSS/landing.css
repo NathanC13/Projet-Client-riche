@@ -1,12 +1,16 @@
 body{
     background: #9cc2ee;
+    background-image:url(../img/img1.jpg);
+    background-size: cover;
 }
 #container{
+    color: white;
     padding: 2em;
     margin:5px auto;
 }
 
 #h2{
+    color: white;
     padding-left: 2em;  
 }
 
