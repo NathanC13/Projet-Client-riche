@@ -1,27 +1,29 @@
 body{
     background: #9cc2ee;
-    background-image:url(../img/img1.jpg);
+    background-image:url(../img/img5.jpg);
     background-size: cover;
 }
 #container{
     color: white;
-    padding: 2em;
+    text-shadow: 2px 2px blue;
+    padding: 4em;
     margin:5px auto;
 }
 
 #h2{
     color: white;
-    padding-left: 2em;  
+    text-shadow: 2px 2px blue;
+    padding-left: 4em;  
 }
 
 #bouton{
-    padding: 2em;
+    padding: 4em;
 } 
 
 input[type=submit] {
-    background-color: #4CAF50; /* Green */
+    background-color: #5a9ae4; /* Green */
     border: none;
-    color: black;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
