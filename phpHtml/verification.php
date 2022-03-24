@@ -2,7 +2,7 @@
 session_start();
 if(isset($_POST['username']) && isset($_POST['password']))
 {
-    // connexion à la base de données
+    /* connexion à la base de données
     $db_username = 'E205434Y_collinet';
     $db_password = 'eNtrnM5gX3';
     $db_name     = 'E205434Y_collinet';
@@ -14,15 +14,37 @@ if(isset($_POST['username']) && isset($_POST['password']))
     // pour éliminer toute attaque de type injection SQL et XSS
     $username = mysqli_real_escape_string($db,htmlspecialchars($_POST['username'])); 
     $password = mysqli_real_escape_string($db,htmlspecialchars($_POST['password']));
+    */
+      $username = "";
+      $password = "";
+
+      define("MY_LOGIN","toto");
+      define("MY_PASS","toto");
+
+      if(isset($_POST["username"]))
+	      $username = $_POST["username"];
+      if(isset($_POST["password"]))
+	      $password = $_POST["password"];
     
     if($username !== "" && $password !== "")
     {
+       /*
         $requete = "SELECT count(*) FROM users where 
               username = '".$username."' and password = '".$password."' ";
         $exec_requete = mysqli_query($db,$requete);
         $reponse      = mysqli_fetch_array($exec_requete);
         $count = $reponse['count(*)'];
         if($count!=0) // nom d'utilisateur et mot de passe correctes
+        {
+           $_SESSION['username'] = $username;
+           header('Location: principale.php');
+        }
+        else
+        {
+           header('Location: login.php?erreur=1'); // utilisateur ou mot de passe incorrect
+        }
+        */
+        if(MY_LOGIN==$username && MY_PASS==$password) // nom d'utilisateur et mot de passe correctes
         {
            $_SESSION['username'] = $username;
            header('Location: principale.php');
