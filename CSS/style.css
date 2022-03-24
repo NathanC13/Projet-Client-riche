@@ -1,6 +1,9 @@
 body{
     background: #5a9ae4;
+    background-image:url(../img/img2.jpg);
+    background-size: cover;
 }
+
 #container{
     width:400px;
     margin:0 auto;
