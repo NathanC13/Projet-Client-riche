@@ -44,6 +44,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
            header('Location: login.php?erreur=1'); // utilisateur ou mot de passe incorrect
         }
         */
+
         if(MY_LOGIN==$username && MY_PASS==$password) // nom d'utilisateur et mot de passe correctes
         {
            $_SESSION['username'] = $username;
@@ -63,5 +64,5 @@ else
 {
    header('Location: login.php');
 }
-mysqli_close($db); // fermer la connexion
+//mysqli_close($db); // fermer la connexion
 ?>
