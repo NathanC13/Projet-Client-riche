@@ -3,6 +3,12 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+
+
+.findbtn {
+
+  background-color: #ffb74d;
+}
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -2413,11 +2419,6 @@ html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-  float: right;
-  padding: 2em;
-  margin-top: 25em;
-  margin-right: 25em;
-
   /* 2 */
 }
 
@@ -4759,7 +4760,7 @@ small {
 }
 
 .card .card-title {
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -5257,7 +5258,7 @@ small {
 .btn, .btn-large, .btn-small {
   text-decoration: none;
   color: #fff;
-  background-color: orange;
+  background-color: #26a69a;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: background-color .2s ease-out;
@@ -6145,11 +6146,9 @@ textarea.materialize-textarea {
   border-radius: 0;
   outline: none;
   height: 3rem;
-  width: 30%;
+  width: 100%;
   font-size: 16px;
   margin: 0 0 8px 0;
-  margin-top: 22em;
-  margin-left: 25em;
   padding: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
