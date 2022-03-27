@@ -1,20 +1,38 @@
 import useGoogleBookApi from "../gapibook.js";
 
 Vue.component("search", {
-  template: `<form  @submit.prevent="handleSubmit">
-                    <input type="text" v-model="bookTitle"/>
-                    <input type="submit" value="SEARCH" class="btn"/>
+  template: `
+              <form class="valign-wrapper"   @submit.prevent="handleSubmit">
+                    <input class="mx-15" type="text" v-model="recherche" placeholder="Rechercher un livre"/>
+                    <input type="submit"  value="Rechercher" class="btn"/>
+                        
             </form>`,
   data: function () {
     return {
-      bookTitle: "",
+      recherche: "",
     };
   },
   methods: {
     handleSubmit: function () {
-      useGoogleBookApi
-        .bySearch(this.bookTitle)
-        .then((data) => this.$emit("search-done", data.items));
+      if (
+        document.getElementById("free").checked &&
+        document.getElementById("eBook").checked
+      ) {
+        useGoogleBookApi
+          .byEbookFree(this.recherche)
+          .then((data) => this.$emit("search-done", data.items));
+      } else if (
+        document.getElementById("free").checked == false &&
+        document.getElementById("eBook").checked
+      ) {
+        useGoogleBookApi
+          .byEbook(this.recherche)
+          .then((data) => this.$emit("search-done", data.items));
+      } else {
+        useGoogleBookApi
+          .bySearch(this.recherche)
+          .then((data) => this.$emit("search-done", data.items));
+      }
     },
   },
 });
