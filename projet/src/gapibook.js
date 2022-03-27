@@ -17,7 +17,7 @@ const useGoogleBookApi = {
 
   byId: (search) => // méthode pour rechercher avec l'id du livre
     new Promise((resolve, reject) => {
-      const BOOK_API_URL = `https://www.googleapis.com/books/v1/volumes/${search}&key=${API_KEY}`;
+      const BOOK_API_URL = `https://www.googleapis.com/books/v1/volumes/${search}`;
 
       fetch(BOOK_API_URL)
         .then((response) => response.json())
