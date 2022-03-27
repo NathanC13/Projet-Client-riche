@@ -1,5 +1,5 @@
 import gapibook from "../gapibook.js";
-
+// Composant pour chaque livre 
 Vue.component("book", {
   props: ["book"],
   template: `
@@ -8,14 +8,14 @@ Vue.component("book", {
             <div class="card-image">
 
               <img :src="book.volumeInfo.imageLinks === undefined? 'assets/img/defaut.jpg' : book.volumeInfo.imageLinks.thumbnail"> 
-
+              <!-- Si le livre n'a pas d'image disponible on en passe un par defaut -->
 
             
             </div>
        
             <div class="card-content">
             <span class="card-title"> {{book.volumeInfo.title}} </span>
-                <p> {{book.volumeInfo.publishedDate.substring(0,4)}} </p>
+                <p> {{book.volumeInfo.publishedDate.substring(0,4)}} </p> <!-- On récupère que l'année en prenant que les 4 premiers caractères -->
             </div>
             <div class="card-action">
                 <a href="#app" @click="handleSelected">En savoir plus</a>
@@ -23,7 +23,7 @@ Vue.component("book", {
       </div>
     </div>`,
   methods: {
-    handleSelected: function () {
+    handleSelected: function () { // fonction qui émet l'id du livre 
       this.$emit("book-selected", this.book.id);
     },
   },
